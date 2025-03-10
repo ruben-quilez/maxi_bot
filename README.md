@@ -230,7 +230,7 @@ El proyecto incluye un script `init_service.sh` que automatiza el proceso de ini
 ### Parámetros de Búsqueda
 
 - `QDRANT_SEARCH_LIMIT`: Número máximo de resultados a devolver (por defecto `10`)
-- `QDRANT_SEARCH_SCORE_THRESHOLD`: Umbral mínimo de similitud para considerar un resultado relevante (por defecto `0.7`)
+- `QDRANT_SEARCH_SCORE_THRESHOLD`: Umbral mínimo de similitud para considerar un resultado relevante (por defecto `0.3`)
 
 ## Logging
 
