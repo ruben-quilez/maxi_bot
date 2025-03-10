@@ -138,41 +138,6 @@ El proyecto incluye un script `init_service.sh` que automatiza el proceso de ini
    python -m scripts.load_dataset dataset.json
    ```
 
-### Ejecución Local (Desarrollo)
-
-1. **Cambiar `QDRANT_HOST` en .env**
-
-   Asegúrate de modificar en el archivo `.env`:
-   ```
-   QDRANT_HOST=localhost
-   ```
-
-2. **Instalar dependencias**
-
-   ```bash
-   cd app
-   pip install -r requirements.txt
-   ```
-
-3. **Iniciar Qdrant con Docker**
-
-   ```bash
-   docker-compose up -d maxi_qdrant
-   ```
-
-4. **Ejecutar la API localmente**
-
-   ```bash
-   cd app
-   uvicorn main:app --reload --host 0.0.0.0 --port 8000
-   ```
-
-5. **Cargar el dataset**
-
-   ```bash
-   python scripts/load_dataset.py
-   ```
-
 ## Uso de la API
 
 ### Endpoints Principales
@@ -199,7 +164,7 @@ El proyecto incluye un script `init_service.sh` que automatiza el proceso de ini
 - **Ejemplo de Request**:
   ```json
   {
-      "keyword": "planes",
+      "keyword": "planes.packs",
       "pregunta": "¿Qué diferencia hay entre el Pack Completo y el Básico?",
       "respuesta": "El Pack Completo incluye todas las funcionalidades premium, mientras que el Pack Básico ofrece solo funciones esenciales a un precio más accesible."
   }
