@@ -60,7 +60,7 @@ Este sistema implementa un motor de Retrieval Augmented Generation (RAG) utiliza
 
    # Parámetros de búsqueda
    QDRANT_SEARCH_LIMIT=10
-   QDRANT_SEARCH_SCORE_THRESHOLD=0.7
+   QDRANT_SEARCH_SCORE_THRESHOLD=0.3
 
    # Configuración general
    LOG_LEVEL=INFO
