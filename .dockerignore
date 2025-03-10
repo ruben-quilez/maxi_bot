@@ -1,0 +1,42 @@
+# Entornos virtuales
+venv/
+env/
+ENV/
+
+# Archivos de configuración
+.env
+.env.*
+!.env.example
+
+# Archivos de Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Logs
+logs/
+*.log
+
+# Directorios de datos
+data/
+qdrant_data/
+
+# Archivos de desarrollo
+.vscode/
+.idea/
+.DS_Store
+
+# Archivos temporales
+.tmp/
+.temp/
+tmp/
+temp/
+
+# Carpetas y archivos específicos de Docker
+.docker/
+docker/

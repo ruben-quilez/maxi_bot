@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  maxi_qdrant:
+      image: qdrant/qdrant:v1.13.0
+      container_name: maxi_qdrant
+      restart: on-failure
+      ports:
+        - "6333:6333"
+        - "6334:6334"
+      volumes:
+        - ./qdrant/qdrant_data:/qdrant/storage
+        - ./qdrant/config:/qdrant/config
+      env_file:
+        - .env
+
+  maxi_api:
+      build:
+        context: ./app
+        dockerfile: Dockerfile
+      container_name: maxi_api
+      restart: on-failure
+      ports:
+        - "8000:8000"
+      volumes:
+        - ./app:/app
+      env_file:
+        - .env
+      depends_on:
+        - maxi_qdrant
