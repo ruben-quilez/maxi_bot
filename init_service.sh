@@ -1,8 +1,5 @@
 #!/bin/bash
-
 # Script para inicializar el servicio RAG y cargar el dataset
-# Autor: Claude
-# Fecha: 10/03/2025
 
 # Colores para los mensajes
 GREEN='\033[0;32m'
